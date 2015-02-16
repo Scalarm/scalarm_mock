@@ -2,8 +2,10 @@ Rails.application.routes.draw do
 
   [:experiment_managers, :storage_managers, :chart_services,
    :db_routers, :db_config_services, :db_instances].each do |name|
-    get "information_service/#{name}" => "information_service##{name}_list"
+    get "information/#{name}" => "information_service##{name}_list"
   end
+
+  get 'simulation_managers' => 'experiment_manager#simulation_managers_list'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

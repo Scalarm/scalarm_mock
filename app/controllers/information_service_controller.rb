@@ -6,9 +6,9 @@ class InformationServiceController < ApplicationController
     end
   end
 
-  create_list_method :experiment_managers
-  create_list_method :storage_managers
-  create_list_method :chart_services
+  create_list_method :experiment_managers, ['localhost:3002']
+  create_list_method :storage_managers, ['localhost:3002/storage']
+  create_list_method :chart_services, ['localhost:3002/chart']
 
   create_list_method :db_routers, %w(localhost:27017)
   create_list_method :db_config_services, %w(localhost:28000)
