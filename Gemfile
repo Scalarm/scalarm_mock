@@ -27,6 +27,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'thin'
+gem 'bson'
+gem 'bson_ext'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
